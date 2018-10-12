@@ -1,0 +1,7 @@
+
+Do something changed and save this file ,
+will trigger hot deployment if you have changed class file.
+Note, it will do nothing if none of .class file changed.
+Write By ZhangJian 2018-09-03
+
+version=1

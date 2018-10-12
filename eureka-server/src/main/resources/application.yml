@@ -2,13 +2,13 @@
 
 spring:
   application:
-    name: eureka-server # 该名字是服务器之间选择的标志
-
+    # 该名字是服务器之间选择的标志
+    name: eureka-server
 
 server:
   port: 8761
   servlet:
-    context-path: /server
+    context-path: # 这里不要加任何前缀,不然出现一些奇怪的bug
 
 eureka:
   instance:
@@ -20,6 +20,8 @@ eureka:
     fetch-registry: false
     serviceUrl:
       # 服务注册中心地址(注意client的地址一定要加上${server.servlet.context-path}/eureka)
+      # 完整版注册中心: localhost:8761/eureka/,  注意eureka不要做任何更改
       defaultZone: http://${eureka.instance.hostname}:${server.port}${server.servlet.context-path}/eureka/
+
 
 
