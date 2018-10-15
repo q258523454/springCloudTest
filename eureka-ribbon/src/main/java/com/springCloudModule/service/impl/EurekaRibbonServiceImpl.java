@@ -1,6 +1,6 @@
 package com.springCloudModule.service.impl;
 
-import com.springCloudModule.service.TestService;
+import com.springCloudModule.service.EurekaRibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,13 +13,13 @@ import org.springframework.web.client.RestTemplate;
  */
 
 @Service
-public class TestServiceImpl implements TestService {
+public class EurekaRibbonServiceImpl implements EurekaRibbonService {
 
     @Autowired
     RestTemplate restTemplate;
 
     @Override
     public String ribbonTest(String name) {
-        return restTemplate.getForObject("http://EUREKA-CLIENT/test?name=" + name, String.class);
+        return restTemplate.getForObject("http://eureka-service/getServicePort?name=" + name, String.class);
     }
 }

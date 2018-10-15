@@ -10,19 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaClientApplication {
+public class EurekaServiceApplication {
 
 
     @Value("${server.port}")
     private String port;
 
     public static void main(String[] args) {
-
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(EurekaServiceApplication.class, args);
     }
 
-    @GetMapping(value = "/test", produces = "application/json;charset=UTF-8")
-    public String test(String name) {
+    @GetMapping(value = "/getServicePort", produces = "application/json;charset=UTF-8")
+    public String eurekaService(String name) {
         return "name:" + name + ",port:" + this.port;
     }
 

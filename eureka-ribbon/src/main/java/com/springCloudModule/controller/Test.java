@@ -1,6 +1,8 @@
 package com.springCloudModule.controller;
 
-import com.springCloudModule.service.TestService;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.springCloudModule.service.EurekaRibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Test {
     @Autowired
-    private TestService testService;
+    private EurekaRibbonService eurekaRibbonService;
 
-    @GetMapping(value = "/test", produces = "application/json; charset=UTF-8")
+    @GetMapping(value = "/eurekaRibbon", produces = "application/json; charset=UTF-8")
     public String test(String name) {
-        return testService.ribbonTest(name);
+        return JSONObject.toJSONString(eurekaRibbonService.ribbonTest(name));
     }
 }

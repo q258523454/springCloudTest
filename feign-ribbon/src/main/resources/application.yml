@@ -1,0 +1,16 @@
+
+
+
+server:
+  port: 8765
+
+spring:
+  application:
+    name: feign-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defualtZone: http://localhost:8761/eureka/
+
+

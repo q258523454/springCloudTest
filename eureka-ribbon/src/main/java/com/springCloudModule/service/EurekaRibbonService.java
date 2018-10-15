@@ -7,7 +7,7 @@ package com.springCloudModule.service;
  * @date :   2018-10-12
  */
 
-public interface TestService {
+public interface EurekaRibbonService {
 
     public String ribbonTest(String name);
 }

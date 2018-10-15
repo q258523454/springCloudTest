@@ -1,10 +1,10 @@
 spring:
   application:
-    name: eureka-client # 该名字是服务器之间选择的标志[服务器会显示为EUREKA-CLIENT]
+    name: eureka-service # 该名字是服务器之间选择的标志[服务器会显示为EUREKA-CLIENT]
 
 
 server:
-  port: 8763
+  port: 8762
 
 eureka:
   client:
