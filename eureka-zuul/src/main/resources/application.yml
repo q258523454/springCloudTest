@@ -1,0 +1,22 @@
+
+server:
+  port: 8769
+
+spring:
+  application:
+    name: eureka-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defualtZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    myZuul-1:
+      path: /myZuul-1/**
+      serviceId: eureka-ribbon  # http://eureka-ribbn/**, 例如http://eureka-ribbn/eurekaRibbon?name=
+    myZuul-2:
+      path: /myZuul-2/**
+      serviceId: eureka-feign   # http://eureka-fegin/**, 例如http://eureka-ribbn/callFeign?name=
+

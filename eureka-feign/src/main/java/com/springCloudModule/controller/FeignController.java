@@ -1,5 +1,6 @@
 package com.springCloudModule.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.springCloudModule.service.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,8 @@ public class FeignController {
 
     @GetMapping(value = "/callFeign")
     public String callFeign(String name) {
-        return feignService.callFeign(name);
+        return JSONObject.toJSONString(feignService.callFeign(name));
     }
+
 }
 
