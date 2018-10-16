@@ -3,13 +3,18 @@ server:
   port: 8881
 spring:
   application:
-    name: config-client
+    name: config-client2
   cloud:
     config:
       label: master
       profile: test # 这里可以选择dev,test,prod, 前提是配置服务器上必须有config-clent-dev/test/prod
-      # uri是服务配置中心的地址
-      uri: http://localhost:8888/
+      # uri: http://localhost:8888/ # 第一种方法:直接从uri服务器地址拉取配置uri是服务配置中心的地址
+      discovery: # 第二种方法, 从注册中心中的配置服务器拉取配置[推荐这种方法]
+        enabled: true # 从注册中心读取文件(写了这一项,还需要指定配置中心的服务名service-id)
+        service-id: config-server # (注册中心中,配置服务器的名字)
 
-
-
+eureka:
+  client:
+    serviceUrl:
+      # server服务器
+      defaultZone: http://localhost:8761/eureka/
