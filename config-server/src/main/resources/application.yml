@@ -7,8 +7,18 @@ spring:
     config:
       server:
         git:
+          # 配置git仓库地址和配置文件相对路径
           uri: https://github.com/q258523454/springCloudTest
           search-paths: /config-server/src/main/resources
-          default-label: master
-          username: # 如果Git仓库为公开仓库，可以不填写用户名和密码
+          # 如果Git仓库为公开仓库，可以不填写用户名和密码
+          username:
           password:
+      label: master # 配置仓库的分支
+
+#http请求地址和资源文件映射如下:
+#
+#/{application}/{profile}[/{label}]
+#/{application}-{profile}.yml
+#/{label}/{application}-{profile}.yml
+#/{application}-{profile}.properties
+#/{label}/{application}-{profile}.properties
