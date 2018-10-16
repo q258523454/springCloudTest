@@ -1,12 +1,15 @@
 
 server:
   port: 8881
+
+
 spring:
   application:
     name: config-client2
+  # 在拉取配置服务器的配置会覆盖本地配置,这里拉取的port=9999,因此port端口更改了
   cloud:
     config:
-      label: master
+      label: master # 指明远程仓库的分支
       profile: test # 这里可以选择dev,test,prod, 前提是配置服务器上必须有config-clent-dev/test/prod
       # uri: http://localhost:8888/ # 第一种方法:直接从uri服务器地址拉取配置uri是服务配置中心的地址
       discovery: # 第二种方法, 从注册中心中的配置服务器拉取配置[推荐这种方法]

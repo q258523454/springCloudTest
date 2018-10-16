@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigClientApplication {
 
     @Value("${foo}")
-    private String foo;
+    private String foo; // 从配置服务器读取配置后,以@Value来获取
 
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
