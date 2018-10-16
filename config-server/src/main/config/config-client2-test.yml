@@ -1,0 +1,9 @@
+
+foo: config-client-test.yml, This is test version.
+
+server:
+  port: 9999
+
+spring:
+  application:
+    name: fromServer

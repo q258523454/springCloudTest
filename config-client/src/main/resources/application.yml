@@ -3,11 +3,11 @@ server:
   port: 8881
 spring:
   application:
-    name: config-client
+    name: config-client2
   cloud:
     config:
       label: master
-      profile: dev
+      profile: test # 这里可以选择dev,test,prod, 前提是配置服务器上必须有config-clent-dev/test/prod
       # uri是服务配置中心的地址
       uri: http://localhost:8888/
 
