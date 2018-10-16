@@ -64,15 +64,6 @@
             <version>1.2.49</version>
         </dependency>
 
-        <!-- —————————————————— 热部署架包 BEGIN —————————————————————— -->
-        <!-- 默认不监控静态资源resource/static/images, 可手动排除与指定单一文件监控(实现手动出发热部署) -->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-devtools</artifactId>-->
-            <!--<optional>true</optional>-->
-        <!--</dependency>-->
-        <!-- —————————————————— 热部署架包 END —————————————————————— -->
-
     </dependencies>
 
     <build>

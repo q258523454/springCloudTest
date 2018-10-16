@@ -8,8 +8,8 @@ spring:
       server:
         git:
           # 配置git仓库地址和配置文件相对路径
-          uri: https://github.com/q258523454/springCloudTest
-          search-paths: /config-server/src/main/resources
+          uri: https://github.com/q258523454/springCloudTest/
+          search-paths: config-server/src/main/resources
           # 如果Git仓库为公开仓库，可以不填写用户名和密码
           username:
           password:
