@@ -3,3 +3,5 @@ server:
 spring:
   application:
     name: fromServer
+
+foo: 这是config-server主程序的dev配置文件
