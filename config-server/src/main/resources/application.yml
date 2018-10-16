@@ -15,11 +15,4 @@ spring:
           password:
       label: master # 配置仓库的分支
 
-#http请求地址和资源文件映射如下:
-#
-#/{application}/{profile}[/{label}]
-
-#/{application}-{profile}.yml
-#/{label}/{application}-{profile}.yml
-#/{application}-{profile}.properties
-#/{label}/{application}-{profile}.properties
+#http请求地址和资源文件映射..常用的是: /{application}/{profile}[/{label}]
