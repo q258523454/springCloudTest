@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientApplication {
 
-    @Value("${dev}")
-    private String dev;
+    @Value("${foo}")
+    private String foo;
 
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
     }
 
-    @RequestMapping(value = "/getDev")
-    public String getDev() {
-        return dev;
+    @RequestMapping(value = "/getSettings")
+    public String getSettings() {
+        return foo;
     }
 }
