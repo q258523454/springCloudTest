@@ -1,0 +1,8 @@
+
+server:
+  port: 8081
+spring:
+  zipkin:
+    base-url: http://139.199.19.34:9411
+  application:
+    name: zipkin-service1
