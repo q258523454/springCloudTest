@@ -26,10 +26,10 @@ spring:
       trace:
         enabled: true
   rabbitmq:
-    host:
-    port:
-    username:
-    password:
+    host: 139.199.19.34
+    port: 5672
+    username: admin
+    password: 123
 
 # 消息总线的配置Spring Cloud bus
 management:
