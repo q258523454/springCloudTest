@@ -1,5 +1,5 @@
 
-foo: config-client-test.yml, This is test version.
+foo: config-client-test.yml, This is test version. rabbit hello!
 
 server:
   port: 9999
