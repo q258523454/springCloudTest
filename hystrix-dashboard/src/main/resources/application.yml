@@ -1,0 +1,27 @@
+
+
+server:
+  port: 8777
+
+spring:
+  application:
+    name: hystrix-dashboard
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+# 加入断路器, 当服务响应多次超时或者服务不可用的时候,返回指定callback
+hystrix:
+  metrics:
+    enabled: true
+
+# 暴露/hystrix.stream接口服务
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
