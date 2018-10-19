@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-service # 该名字是服务器之间选择的标志[服务器会显示为EUREKA-CLIENT]
+    name: my-eureka-service # 该名字是服务器之间选择的标志[服务器会显示为EUREKA-CLIENT]
 
 
 server:

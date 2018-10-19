@@ -1,0 +1,12 @@
+
+
+spring:
+  profiles:
+    active: peer1
+eureka:
+  instance:
+    prefer-ip-address: true # 设置为true, 可以通过ip地址直接实例化,eureka.instance.name不需要写别名
+
+
+
+

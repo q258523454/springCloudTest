@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: peer-service # 该名字是服务器之间选择的标志[服务器会显示为PEER-SERVICE]
+
+
+server:
+  port: 8763
+
+eureka:
+  client:
+    serviceUrl:
+      # server服务器
+      defaultZone: http://119.29.240.47:18761/eureka/

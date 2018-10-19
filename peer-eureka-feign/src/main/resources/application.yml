@@ -1,0 +1,15 @@
+
+
+
+server:
+  port: 8765
+
+spring:
+  application:
+    name: peer-feign
+
+eureka:
+  client:
+    serviceUrl:
+      # server服务器
+      defaultZone: http://119.29.240.47:18761/eureka/
