@@ -1,4 +1,4 @@
-package com.springCloudModule;
+package com.springCloudTest;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaServiceApplication {
+public class PeerEurekaServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(PeerEurekaServiceApplication.class, args);
     }
 
     @Value("${server.port}")
@@ -24,6 +24,4 @@ public class EurekaServiceApplication {
         return "name:" + name + ",port:" + this.port;
     }
 
-
 }
-
