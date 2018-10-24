@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consul-cloud-consumer
+  cloud:
+    consul:
+      host: 192.168.6.244
+      port: 8500
+      discovery:
+        register: false # 仅作为消费者, 不注册服务
+server:
+  port: 8503
+

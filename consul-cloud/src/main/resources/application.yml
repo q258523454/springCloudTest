@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: consul-cloud-1
+  cloud:
+    consul:
+      host: 192.168.6.244
+      port: 8500
+      discovery:
+        service-name: my-first-consul-service # 服务调用的名字
+        health-check-interval: 15s
+server:
+  port: 8501
+
+
+
+
+
