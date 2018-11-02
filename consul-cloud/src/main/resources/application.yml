@@ -7,7 +7,10 @@ spring:
       port: 8500
       discovery:
         service-name: my-first-consul-service # 服务调用的名字
-        health-check-interval: 15s
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 5s
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+
 server:
   port: 8501
 
