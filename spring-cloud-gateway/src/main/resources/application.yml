@@ -8,6 +8,10 @@ spring:
     gateway:
       routes:
       - id: test
-        uri: http://www.baidu.com/
+        uri: http://www.baidu.cn/
         predicates:
-          - Path=/zhang/**
+          - Path=/dalaoyang/**
+      - id: juejin
+        uri: https://juejin.im/user/5aa50b96f265da23866f836e
+        predicates:
+          - Path=/juejin/**
