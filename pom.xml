@@ -4,10 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
-    <artifactId>springcloudtest</artifactId>
+    <artifactId>spring-cloud-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>springcloudtest</name>
+
+    <name>spring-cloud-test</name>
     <description>Demo project for Spring Boot Cloud</description>
 
     <parent>
